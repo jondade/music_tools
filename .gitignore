@@ -1,0 +1,7 @@
+# Directories to ignore
+tmp
+doc
+.yardoc
+
+# Files to ignore
+Gemfile.lock
