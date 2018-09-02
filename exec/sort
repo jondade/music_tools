@@ -1,4 +1,0 @@
-#! /usr/bin/env ruby
-
-require 'music_tools'
-puts Musictools.sort(ARGV)
