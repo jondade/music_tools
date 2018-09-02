@@ -1,3 +1,4 @@
+require_relative 'music_tools/version'
 # Provides management of the music sorting process
 class MusicTools
   # Sorts a given file into a directory structure from a base directory

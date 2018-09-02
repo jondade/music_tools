@@ -1,6 +1,11 @@
 require 'music_tools'
 
 describe MusicTools do
+  describe 'the gem' do
+    it 'has a version' do
+      expect(MusicTools::VERSION).to match(/\d+\.\d+\.\d+/)
+    end
+  end
   describe '.sort' do
     context 'at invocation' do
       context 'given one argument it raises an exception' do
