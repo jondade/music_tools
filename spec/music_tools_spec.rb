@@ -6,7 +6,8 @@ describe MusicTools do
       context 'given one argument it raises an exception' do
         it 'raises an argument error' do
           expect do
-            MusicTools.sort('one argument')
+            m = MusicTools.new
+            m.sort('one argument')
           end.to raise_error(ArgumentError)
         end
       end
@@ -15,7 +16,8 @@ describe MusicTools do
       context 'given a missing filename' do
         it 'returns an exception' do
           expect do
-            MusicTools.sort('some directory', 'some/missing/file')
+            m = MusicTools.new
+            m.sort('some directory', 'some/missing/file')
           end.to raise_error(RuntimeError, 'Missing file')
         end
       end
@@ -28,14 +30,16 @@ describe MusicTools do
       context 'given an empty directory argument' do
         it 'raises an ArgumentError' do
           expect do
-            MusicTools.sort('', 'some/test/file')
+            m = MusicTools.new
+            m.sort('', 'some/test/file')
           end.to raise_error(ArgumentError)
         end
       end
       context 'given a missing directory' do
         it 'returns an exception' do
           expect do
-            MusicTools.sort('/not/found/directory', '/tmp/test')
+            m = MusicTools.new
+            m.sort('/not/found/directory', '/tmp/test')
           end.to raise_error(RuntimeError, 'No such directory')
         end
       end
